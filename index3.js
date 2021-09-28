@@ -83,9 +83,28 @@ var total = 0
 
 var limit = 10
 
-while (total < limit) {
-    total++;
+var i = 1
+
+while (i <= limit) {
+    i++
+    total = total + i
     console.log(total)
 }
 
 
+// Bonus III
+
+var promo = ["Marco", "Kevin", "Jong", "Alin", "Eloi", "Hèlène", "Evan", "Salwa", "Hanna"];
+
+var randomPromo = promo[Math.floor(Math.random() * promo.length)];
+
+console.log(randomPromo);
+
+// Bonus IV 
+
+var empty = []
+
+for (i = 0; i < empty; i++) {
+    empty = Math.floor(Math.random() * 100) + empty
+    console.log(empty)
+}
