@@ -56,15 +56,15 @@ console.log(sentenceInverse)
 
 //bonus 
 
-for (i = 0; i < 100; i++) {
+for (i = 0; i <= 100; i++) {
     if (i % 3 === 0 && i % 5 === 0) {
-        console.log("fizzbuzz")
+        console.log(i, "fizzbuzz")
     }
     else if (i % 3 === 0) {
-        console.log("Fizz")
+        console.log(i, "Fizz")
     }
     else if (i % 5 === 0) {
-        console.log("buzz")
+        console.log(i, "buzz")
     }
 
     else if (i % 7) {
@@ -103,8 +103,17 @@ console.log(randomPromo);
 // Bonus IV 
 
 var empty = []
+var number = ""
 
-for (i = 0; i < empty; i++) {
-    empty = Math.floor(Math.random() * 100) + empty
-    console.log(empty)
+for (; empty.length <= 20; number = Math.floor(Math.random() * (100 - 0 + 1) + 0)) {
+    empty.push(number)
 }
+console.log(empty)
+
+var empty = []
+
+/* for ( ; empty.length <= 20; ) {
+
+
+}
+console.log(emptyPush[i]) */
