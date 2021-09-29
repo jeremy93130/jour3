@@ -5,9 +5,18 @@ var somme = 0
 
 for (var i = 11; i < 47; i++) {
     if (i % 2 === 0) {
-        somme = somme + i
+        somme += i
     }
 } console.log(somme)
+
+var somme = 0
+for (var i = 11; i < 47; i++)  // Version pro
+
+    somme += (i % 2 ? 0 : i)
+
+console.log(somme)
+
+
 
 // Exercice 2: Nombres impairs 
 
@@ -16,9 +25,12 @@ var somme = 0
 for (var i = 109; i < 588; i++) {
     if (i % 2 === 0) {
     } else {
-        somme = somme + i
+        somme += i
     }
 } console.log(somme)
+
+
+
 
 // Exercice 3 : Puissance et racine carrée 
 
@@ -50,11 +62,9 @@ for (var i = 0; i <= 10; i++) {
 for (var i = 0; i <= 10; i++) {
     for (var j = 0; j <= 10; j++) {
         var results = j * i
-        if (results < 1 && results < 10) {
-            console.log("\n")
-        }
-        console.log(`${i}x${j}=${results}`)
+        console.log(`${i} x ${j} = ${results}`)
     }
+    console.log("\n")
 }
 
 // Exercice 5 : Factorielles V1 :
@@ -66,10 +76,57 @@ for (var i = 7; i >= 1; i--) {
 
 // Eercice 6 : Factorielles V2 :
 
-var nummber = 0
+var nummber = 1
 
-for (var i = 8; i >= 0; i--) {
-    for (var j = 8; j >= 0; i--) {
-        var nummber2 = i * j * nummber
+for (var i = 0; i <= 8; i++) {
+    nummber = 1;
+    for (var j = 1; j <= i; j++) {
+        nummber *= j
     }
-} console.log(`${i}${j}${nummber2}`)
+    console.log(i + "! = " + nummber)
+}
+
+for (var n = 1, i = 0; i < 9; i++)
+    console.log(i + "! = " + (n *= (i < 1 ? 1 : i))) // Code Pro
+
+
+// Exercice 8 : Somme des carrés
+
+var number = 0
+
+for (var i = 5; i < 11; i++) {
+    number += i * i // number = number + i * i
+} console.log(number)
+
+// Exercice 9 : 
+
+var nombresMultiples7 = 0
+
+for (var i = 100; i < 1001; i++) {
+    if (i % 7 === 0) {
+        nombresMultiples7 += 1
+    }
+} console.log(nombresMultiples7)
+
+// Version Pro
+for (var nombresMultiples7 = 0, i = 100; i < 1001; i++)
+    nombresMultiples7 += (i % 7 ? 0 : 1)
+console.log(nombresMultiples7)
+
+// Exercice 10 :
+
+var somme = 0
+var de
+
+for (var i = 0; i < 20; i++) {
+    de = Math.floor(6 * Math.random() + 1)
+    if (de >= 5){
+        somme += de       // somme des valeurs supérieures ou égales à 5
+        // somme += 1   // nombre de tirage de dés supérieurs ou égales tiré 5 ou plus 
+    }
+}console.log(somme)
+
+
+
+
+
