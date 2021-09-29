@@ -37,7 +37,7 @@ console.log(number.sort((a, b) => a - b))
 var total = 0
 var limit = 10
 
-for (i = 1; i <= limit; i++) {
+for (var i = 1; i <= limit; i++) {
     total = total + i
     console.log(i)
 }
@@ -48,7 +48,7 @@ console.log(total)
 var sentence = "Hello Konexio ! "
 var sentenceInverse = ""
 
-for (i = 0; i <= sentence.length - 1; i++) {
+for (var i = 0; i <= sentence.length - 1; i++) {
     sentenceInverse = sentence[i] + sentenceInverse;
 }
 console.log(sentenceInverse)
@@ -56,7 +56,7 @@ console.log(sentenceInverse)
 
 //bonus 
 
-for (i = 0; i <= 100; i++) {
+for (var i = 0; i <= 100; i++) {
     if (i % 3 === 0 && i % 5 === 0) {
         console.log(i, "fizzbuzz")
     }
@@ -80,17 +80,15 @@ for (i = 0; i <= 100; i++) {
 // Bonus While
 
 var total = 0
-
 var limit = 10
+var counter = 0
 
-var i = 1
-
-while (i <= limit) {
-    i++
-    total = total + i
-    console.log(total)
+while (counter <= limit) {
+    total = total + counter
+    counter++
 }
 
+console.log(total)
 
 // Bonus III
 
@@ -103,17 +101,22 @@ console.log(randomPromo);
 // Bonus IV 
 
 var empty = []
-var number = ""
+var limit = 20
 
-for (; empty.length <= 20; number = Math.floor(Math.random() * (100 - 0 + 1) + 0)) {
+// Affiche 20 nombres aléatoires entre 0 et 100 :
+
+for (var i = 0; i < limit; i++) { // i < limit =
+    var number = Math.floor(Math.random() * (100 - 0 + 1) + 0) // Création de variable number qui va prendre des nombres aléatoire entre 0 et 100
     empty.push(number)
 }
-console.log(empty)
+console.table(empty)
 
-var empty = []
+var max = -1
 
-/* for ( ; empty.length <= 20; ) {
+// Affiche le nombre le plus grand de la boucle aléatoire
+for (var i = 0; i < empty.length; i++) {
+    if (empty[i] > max) {     //empty[i] = variable empty [i], = variable i dans l'élément empty (tableau) - Si la valeur de empty[i] est supérieure à max
+        max = empty[i]        //         Alors max prend la valeur de empty[i]
+    }
 
-
-}
-console.log(emptyPush[i]) */
+} console.log(max)
