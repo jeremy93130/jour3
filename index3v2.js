@@ -43,24 +43,33 @@ var results = 0
 
 for (var i = 0; i <= 10; i++) {
     results = i * 3
-    console.log(`3x${i}=${results}`)
+    // console.log(`3x${i}=${results}`)
 }
 
 // Exercice 4 : Tables de multiplications v2 :
 for (var i = 0; i <= 10; i++) {
-    console.log(i)
     for (var j = 0; j <= 10; j++) {
         var results = j * i
-        console.log(`${i}*${j}=${results}`)
+        if (results < 1 && results < 10) {
+            console.log("\n")
+        }
+        console.log(`${i}x${j}=${results}`)
     }
 }
 
-
-// Exercice 5 : Factorielle v1 : 
-
+// Exercice 5 : Factorielles V1 :
 var numm = 1
 
-for (var i = 0; i <= 7; i++) {
-    var numm= numm * i
-
+for (var i = 7; i >= 1; i--) {
+    var numm = numm * i
 } console.log(numm)
+
+// Eercice 6 : Factorielles V2 :
+
+var nummber = 0
+
+for (var i = 8; i >= 0; i--) {
+    for (var j = 8; j >= 0; i--) {
+        var nummber2 = i * j * nummber
+    }
+} console.log(`${i}${j}${nummber2}`)
