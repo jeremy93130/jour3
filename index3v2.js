@@ -5,6 +5,7 @@ var somme = 0
 
 for (var i = 11; i < 47; i++) {
     if (i % 2 === 0) {
+        console.log(i)
         somme += i
     }
 } console.log(somme)
@@ -71,60 +72,65 @@ for (var i = 0; i <= 10; i++) {
 var numm = 1
 
 for (var i = 7; i >= 1; i--) {
-    var numm = numm * i
+    numm *= i
 } console.log(numm)
 
 // Eercice 6 : Factorielles V2 :
 
-var nummber = 1
 
-for (var i = 0; i <= 8; i++) {
-    nummber = 1;
-    for (var j = 1; j <= i; j++) {
-        nummber *= j
-    }
-    console.log(i + "! = " + nummber)
+
+for (var i = 0; i < 9; i++) {
+    var facto = 1
+    for (var j = 1; j <= i; j++) { // J va boucler dans la boucle i et s'arreter quand on lui dit 
+        // Exemple : j <= 5 la boucle se concentrera sur la 5 ème boucle et retournera 120 de 0 à 8
+        facto *= j //facto = facto * j
+    } console.log(i + "! = " + facto)
 }
 
-for (var n = 1, i = 0; i < 9; i++)
-    console.log(i + "! = " + (n *= (i < 1 ? 1 : i))) // Code Pro
+// Exercice 8 : Sommes des carrés :
 
-
-// Exercice 8 : Somme des carrés
-
-var number = 0
+var carre
+var somme = 0
 
 for (var i = 5; i < 11; i++) {
-    number += i * i // number = number + i * i
-} console.log(number)
+    carre = i * i; // carre = à chaque tour , la variable i va se multiplier avec elle même ( 5 x 5 , 6 x 6 )
+    somme += carre; // Additionne le total de la variable carré : 5 x 5 = 25 , 6 x 6 = 36 ; Somme = somme (0) + carre (36) etc
+} console.log(somme)
 
-// Exercice 9 : 
+// Exercice 9 : Comptons :
 
-var nombresMultiples7 = 0
+var results = 0
 
 for (var i = 100; i < 1001; i++) {
-    if (i % 7 === 0) {
-        nombresMultiples7 += 1
+    if (i % 7 === 0) // Si i Modulo 7 === 0 (Si le reste de la division de 7 est zéro) 
+        results += 1    // Ajoute + 1 à la variable results ( compte le nombre de multiple de 7 dans la var i et non le resultat )
+} console.log(results)
+
+
+// Exercice 10 : chanceux : 
+
+var de
+var somme
+
+for (var i = 0; i <= 6; i++) {
+    de = Math.floor(Math.random() * (6 - 1 + 1) + 1)
+    if (de >= 5) {
+        somme += de  // somme des valeurs supérieures ou égales à 5
     }
-} console.log(nombresMultiples7)
+} console.log(somme)
 
-// Version Pro
-for (var nombresMultiples7 = 0, i = 100; i < 1001; i++)
-    nombresMultiples7 += (i % 7 ? 0 : 1)
-console.log(nombresMultiples7)
-
-// Exercice 10 :
+// Armstrong
 
 var somme = 0
-var de
+var resultat
 
-for (var i = 0; i < 20; i++) {
-    de = Math.floor(6 * Math.random() + 1)
-    if (de >= 5){
-        somme += de       // somme des valeurs supérieures ou égales à 5
-        // somme += 1   // nombre de tirage de dés supérieurs ou égales tiré 5 ou plus 
-    }
-}console.log(somme)
+for (var i = 100; i < 1000; i++) {
+    somme = i ** 3
+    for (var j = 0; j < i; j++) {
+        resultat = somme + j
+    }//console.log(somme)
+}
+
 
 
 
